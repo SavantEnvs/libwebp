@@ -1,0 +1,11 @@
+project: savantenvs/libwebp
+target: mux_demux_api_fuzzer
+
+cmds:
+  - cmd: /mayhem/mux_demux_api_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/mux_demux_api_fuzzer/mux_demux_api_fuzzer.dict
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/mux_demux_api_fuzzer/testsuite

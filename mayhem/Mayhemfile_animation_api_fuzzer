@@ -1,0 +1,11 @@
+project: savantenvs/libwebp
+target: animation_api_fuzzer
+
+cmds:
+  - cmd: /mayhem/animation_api_fuzzer
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/animation_api_fuzzer/animation_api_fuzzer.dict
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/animation_api_fuzzer/testsuite
